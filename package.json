@@ -42,7 +42,7 @@
     "codecov"
   ],
   "bugs": {
-    "url": "https://github.com/aboutml/valifino.git/issues"
+    "url": "https://github.com/aboutml/valifino/issues"
   },
   "homepage": "https://github.com/aboutml/valifino.git#readme",
   "devDependencies": {
