@@ -48,8 +48,8 @@ Lorem ipsum.
 
 [build-img]:https://github.com/aboutml/valifino/actions/workflows/release.yml/badge.svg
 [build-url]:https://github.com/aboutml/valifino/actions/workflows/release.yml
-[downloads-img]:https://img.shields.io/npm/dt/typescript-npm-package-template
-[downloads-url]:https://www.npmtrends.com/typescript-npm-package-template
+[downloads-img]:https://img.shields.io/npm/dt/valifino
+[downloads-url]:https://www.npmtrends.com/valifino
 [npm-img]:https://img.shields.io/npm/v/valifino
 [npm-url]:https://www.npmjs.com/package/valifino
 [issues-img]:https://img.shields.io/github/issues/aboutml/valifino
