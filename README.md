@@ -16,35 +16,18 @@
 npm install valifino
 ```
 
-## Usage
-
-```ts
-import { myPackage } from 'my-package-name';
-
-myPackage('hello');
-//=> 'hello from my package'
-```
-
 ## API
 
-### myPackage(input, options?)
+### idValidCreditCardNumber(cardNumber: string): boolean
 
-#### input
+Validates a credit card number using the [Luhn algorithm](https://en.wikipedia.org/wiki/Luhn_algorithm).
 
-Type: `string`
+**Example**:
+```ts
+import { idValidCreditCardNumber} from 'valifino';
 
-Lorem ipsum.
-
-#### options
-
-Type: `object`
-
-##### postfix
-
-Type: `string`
-Default: `rainbows`
-
-Lorem ipsum.
+idValidCreditCardNumber('4111111111111111'); // => true
+```
 
 [build-img]:https://github.com/aboutml/valifino/actions/workflows/release.yml/badge.svg
 [build-url]:https://github.com/aboutml/valifino/actions/workflows/release.yml
