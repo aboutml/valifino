@@ -1,7 +1,7 @@
 {
   "name": "valifino",
   "version": "0.0.0-development",
-  "description": "Lightweight NPM library that validates financial operations",
+  "description": "Lightweight npm library that provides different financial validators",
   "main": "./lib/index.js",
   "files": [
     "lib/**/*"

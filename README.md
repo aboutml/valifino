@@ -21,7 +21,7 @@ npm install valifino
 
 - Validate credit card numbers using the Luhn algorithm
 - Validate CVV codes for various card types [TBD]
-- Validate expiration dates of credit cards [TBD]
+- Validate expiration dates of credit cards
 - Validate IBANs for multiple countries [TBD]
 - Validate SWIFT/BIC codes [TBD]
 - Validate routing numbers (e.g., ABA routing numbers) [TBD]
@@ -40,11 +40,29 @@ Validates a credit card number using the [Luhn algorithm](https://en.wikipedia.o
 ```ts
 import { isValidCreditCardNumber} from 'valifino';
 
+/**
+ * @param cardNumber - The card number in string format.
+ * @returns True if the card number is valid, false otherwise.
+ */
 isValidCreditCardNumber('4111111111111111'); // => true
 ```
 
 ### isValidCVV [TBD]
-### isValidExpirationDate [TBD]
+### isValidExpirationDate(expirationDate: string): boolean
+
+Validates the expiration date of a credit card.
+
+```ts
+import { isValidExpirationDate } from 'valifino';
+
+/**
+ * @param expirationDate - The expiration date in the format MM/YY or MM/YYYY.
+ * @returns True if the expiration date is valid, false otherwise.
+ */
+isValidExpirationDate('12/2023'); // => true
+isValidExpirationDate('01-2025'); // => false
+```
+
 ### isValidIBAN [TBD]
 ### isValidSWIFTBIC [TBD]
 ### isValidRoutingNumber [TBD]
