@@ -1,4 +1,4 @@
-export const isValidCreditCardNumber = (creditCardNumber: string): boolean => {
+export function isValidCreditCardNumber(creditCardNumber: string): boolean {
   const digits = creditCardNumber.replace(/\D/g, '').split('').map(Number);
 
   let sum = 0;
@@ -17,4 +17,4 @@ export const isValidCreditCardNumber = (creditCardNumber: string): boolean => {
   }
 
   return sum % 10 === 0;
-};
+}
