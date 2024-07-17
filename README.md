@@ -22,13 +22,13 @@ npm install valifino
 - Validate credit card numbers using the Luhn algorithm
 - Validate CVV codes for various card types
 - Validate expiration dates of credit cards
-- Validate IBANs for multiple countries [TBD]
-- Validate SWIFT/BIC codes [TBD]
-- Validate routing numbers (e.g., ABA routing numbers) [TBD]
-- Validate bank account numbers [TBD]
+- Validate IBANs for multiple countries [To be done]
+- Validate SWIFT/BIC codes [To be done]
+- Validate routing numbers (e.g., ABA routing numbers) [To be done]
+- Validate bank account numbers [To be done]
 - Validate currency codes
-- Validate transaction amounts [TBD]
-- Validate cryptocurrency addresses (e.g., Bitcoin, Ethereum) [TBD]
+- Validate transaction amounts
+- Validate cryptocurrency addresses (e.g., Bitcoin, Ethereum) [To be done]
 
 ## API
 
@@ -100,7 +100,23 @@ isValidCurrencyCode('USD'); // => true
 isValidCurrencyCode('XYZ'); // => false
 ```
 
-### isValidTransactionAmount [TBD]
+### isValidTransactionAmount(amount: number): boolean
+
+Validates a transaction amount (up to 3 decimal places are allowed).
+
+```ts
+import { isValidTransactionAmount } from 'valifino';
+
+/**
+ * Validates a transaction amount (up to 3 decimal places are allowed).
+ * @param amount - The transaction amount to validate.
+ * @returns True if the transaction amount is valid, false otherwise.
+ */
+isValidTransactionAmount(100.0); // => true
+isValidTransactionAmount(100.1234); // => false
+isValidTransactionAmount(-50.00); // => false
+```
+
 ### isValidCryptoAddress [TBD]
 
 [build-img]:https://github.com/aboutml/valifino/actions/workflows/release.yml/badge.svg
