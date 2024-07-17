@@ -26,7 +26,7 @@ npm install valifino
 - Validate SWIFT/BIC codes [TBD]
 - Validate routing numbers (e.g., ABA routing numbers) [TBD]
 - Validate bank account numbers [TBD]
-- Validate currency codes [TBD]
+- Validate currency codes
 - Validate transaction amounts [TBD]
 - Validate cryptocurrency addresses (e.g., Bitcoin, Ethereum) [TBD]
 
@@ -76,7 +76,7 @@ import { isValidExpirationDate } from 'valifino';
  * @param expirationDate - The expiration date in the format MM/YY or MM/YYYY.
  * @returns True if the expiration date is valid, false otherwise.
  */
-isValidExpirationDate('12/2023'); // => true
+isValidExpirationDate('12/2029'); // => true
 isValidExpirationDate('01-2025'); // => false
 ```
 
@@ -84,7 +84,22 @@ isValidExpirationDate('01-2025'); // => false
 ### isValidSWIFTBIC [TBD]
 ### isValidRoutingNumber [TBD]
 ### isValidAccountNumber [TBD]
-### isValidCurrencyCode [TBD]
+### isValidCurrencyCode(currencyCode: string): boolean
+
+Validates a currency code based on the ISO 4217 standard.
+
+```ts
+import { isValidCurrencyCode } from 'valifino';
+
+/**
+ * Validates a currency code against the ISO 4217 standard.
+ * @param currencyCode - The currency code to validate.
+ * @returns True if the currency code is valid, false otherwise.
+ */
+isValidCurrencyCode('USD'); // => true
+isValidCurrencyCode('XYZ'); // => false
+```
+
 ### isValidTransactionAmount [TBD]
 ### isValidCryptoAddress [TBD]
 
