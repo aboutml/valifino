@@ -1,4 +1,4 @@
-import { isValidExpirationDate } from '../../src';
+import { isValidExpirationDate } from '../../../src';
 
 describe('validateExpirationDate', () => {
   describe('isValidExpirationDate', () => {

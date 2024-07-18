@@ -1,4 +1,4 @@
-import { validCurrencyCodes } from '../constants/currencyCodes';
+import { validCurrencyCodes } from './currencyCodes';
 
 /**
  * Validates a currency code against the ISO 4217 standard.

@@ -1,4 +1,4 @@
-import { isValidCreditCardNumber } from '../../src';
+import { isValidCreditCardNumber } from '../../../src';
 
 describe('validateCreditCardNumber', () => {
   describe('#isValidCreditCardNumber', () => {

@@ -1,9 +1,10 @@
 // Validators
-export { isValidCreditCardNumber } from './validators/validateCreditCardNumber';
-export { isValidExpirationDate } from './validators/validateExpirationDate';
-export { isValidCVV } from './validators/validateCVV';
-export { isValidCurrencyCode } from './validators/validateCurrencyCode';
-export { isValidTransactionAmount } from './validators/validateTransactionAmount';
+export { isValidCreditCardNumber } from './validators/creditCardNumber/validateCreditCardNumber';
+export { isValidExpirationDate } from './validators/expirationDate/validateExpirationDate';
+export { isValidCVV } from './validators/cvv/validateCVV';
+export { isValidCurrencyCode } from './validators/currencyCode/validateCurrencyCode';
+export { isValidTransactionAmount } from './validators/transactionAmount/validateTransactionAmount';
+export { isValidIBAN } from './validators/iban/validateIBAN';
 
 // Types
 export { CardType } from './types/CardType';
