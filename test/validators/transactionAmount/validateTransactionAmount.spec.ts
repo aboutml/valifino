@@ -1,4 +1,4 @@
-import { isValidTransactionAmount } from '../../src';
+import { isValidTransactionAmount } from '../../../src';
 
 describe('validateTransactionAmount', () => {
   describe('#isValidTransactionAmount', () => {

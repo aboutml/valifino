@@ -22,7 +22,7 @@ npm install valifino
 - Validate credit card numbers using the Luhn algorithm
 - Validate CVV codes for various card types
 - Validate expiration dates of credit cards
-- Validate IBANs for multiple countries [To be done]
+- Validate IBANs for multiple countries
 - Validate SWIFT/BIC codes [To be done]
 - Validate routing numbers (e.g., ABA routing numbers) [To be done]
 - Validate bank account numbers [To be done]
@@ -80,7 +80,21 @@ isValidExpirationDate('12/2029'); // => true
 isValidExpirationDate('01-2025'); // => false
 ```
 
-### isValidIBAN [TBD]
+### isValidIBAN(iban: string): boolean
+
+Validates an International Bank Account Number (IBAN) for multiple countries.
+
+```ts
+import { isValidIBAN } from 'valifino';
+
+/**
+ * Checks whether a given string is a valid International Bank Account Number (IBAN).
+ * @param iban The IBAN to validate.
+ * @returns `true` if the IBAN is valid, `false` otherwise.
+ */
+isValidIBAN('MD75EX0900002374642125EU'); // => true (Moldova IBAN)
+isValidIBAN('BE68539007547035'); // => false (incorrect digit check)
+````
 ### isValidSWIFTBIC [TBD]
 ### isValidRoutingNumber [TBD]
 ### isValidAccountNumber [TBD]

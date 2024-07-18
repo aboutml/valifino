@@ -1,4 +1,4 @@
-import { CardType } from '../types/CardType';
+import { CardType } from '../../types/CardType';
 
 /**
  * Validates the CVV code for the given card type.

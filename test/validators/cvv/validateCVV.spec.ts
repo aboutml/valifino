@@ -1,5 +1,4 @@
-import { isValidCVV } from '../../src';
-import { CardType } from '../../src/types/CardType';
+import { isValidCVV, CardType } from '../../../src';
 
 describe('validateCVV', () => {
   describe('#isValidCVV', () => {

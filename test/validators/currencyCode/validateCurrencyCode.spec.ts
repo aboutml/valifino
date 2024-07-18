@@ -1,4 +1,4 @@
-import { isValidCurrencyCode } from '../../src';
+import { isValidCurrencyCode } from '../../../src';
 
 describe('validateCurrencyCode', () => {
   describe('isValidCurrencyCode', () => {
