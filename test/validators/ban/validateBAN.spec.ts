@@ -1,7 +1,7 @@
-import { isValidIBAN } from '../../../src';
-import { validIBANSpecifications } from '../../../src/validators/iban/validIBANSpecifications';
+import { isValidIBAN, isValidBBAN } from '../../../src';
+import { validIBANSpecifications } from '../../../src/validators/ban/validIBANSpecifications';
 
-describe('validateIBAN', () => {
+describe('validateBAN', () => {
   describe('#isValidIBAN', () => {
     it('should return false when input is not a String', () => {
       // @ts-ignore
@@ -60,6 +60,39 @@ describe('validateIBAN', () => {
 
     it('should return true for a valid Egypt IBAN', () => {
       expect(isValidIBAN('EG800002000156789012345180002')).toBe(true);
+    });
+  });
+
+  describe('#isValidBBAN', () => {
+    it('should return false when input is not a String', () => {
+      // @ts-ignore
+      expect(isValidBBAN('BE', 1)).toBe(false);
+      // @ts-ignore
+      expect(isValidBBAN('BE', {})).toBe(false);
+      // @ts-ignore
+      expect(isValidBBAN('BE', [])).toBe(false);
+      // @ts-ignore
+      expect(isValidBBAN('BE', true)).toBe(false);
+    });
+
+    it('should validate a correct Belgian BBAN', () => {
+      expect(isValidBBAN('BE', '539007547034')).toBe(true);
+    });
+
+    it('should return true for a valid Dutch IBAN', () => {
+      expect(isValidBBAN('NL', 'INGB0002445588')).toBe(true);
+    });
+
+    it('should validate a correct Belgian BBAN, ignoring format', () => {
+      expect(isValidBBAN('BE', '539-0075470-34')).toBe(true);
+    });
+
+    it('should detect invalid BBAN length', () => {
+      expect(isValidBBAN('BE', '1539-0075470-34')).toBe(false);
+    });
+
+    it('should detect invalid BBAN format', () => {
+      expect(isValidBBAN('BE', 'ABC-0075470-34')).toBe(false);
     });
   });
 });
