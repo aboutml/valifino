@@ -1,6 +1,6 @@
 /**
  * Validates a transaction amount (up to 3 decimal places are allowed).
- * @param amount - The transaction amount to validate.
+ * @param {number} amount - The transaction amount to validate.
  * @returns True if the transaction amount is valid, false otherwise.
  */
 export function isValidTransactionAmount(amount: number): boolean {

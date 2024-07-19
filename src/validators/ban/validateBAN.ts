@@ -12,7 +12,7 @@ function electronicFormat(iban: string): string {
 
 /**
  * Checks whether a given string is a valid International Bank Account Number (IBAN).
- * @param iban The IBAN to validate.
+ * @param {string} iban The IBAN to validate.
  * @returns `true` if the IBAN is valid, `false` otherwise.
  */
 export function isValidIBAN(iban: string): boolean {
@@ -29,8 +29,8 @@ export function isValidIBAN(iban: string): boolean {
 /**
  * Checks if the provided BBAN (Basic Bank Account Number) is valid for a given country.
  *
- * @param countryCode - The two-letter ISO country code.
- * @param bban - The BBAN to validate.
+ * @param {string} countryCode - The two-letter ISO country code.
+ * @param {string} bban - The BBAN to validate.
  * @returns True if the BBAN is valid for the specified country, false otherwise.
  */
 export function isValidBBAN(countryCode: string, bban: string): boolean {

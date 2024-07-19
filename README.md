@@ -20,16 +20,16 @@ npm install valifino
 
 ## Features
 
-- Validate credit card numbers using the Luhn algorithm
-- Validate CVV codes for various card types
-- Validate expiration dates of credit cards
-- Validate IBANs for multiple countries
-- Validate BBANs for multiple countries
+- [Validate credit card numbers using the Luhn algorithm](#isvalidcreditcardnumbercardnumber-string-boolean)
+- [Validate CVV codes for various card types](#isvalidcvvcardtype-string-cvv-string-boolean)
+- [Validate expiration dates of credit cards](#isvalidexpirationdateexpirationdate-string-boolean)
+- [Validate IBANs for multiple countries](#isvalidibaniban-string-boolean)
+- [Validate BBANs for multiple countries](#isvalidbbancountrycode-string-bban-string-boolean)
 - Validate SWIFT/BIC codes [To be done]
 - Validate routing numbers (e.g., ABA routing numbers) [To be done]
 - Validate bank account numbers [To be done]
-- Validate currency codes
-- Validate transaction amounts
+- [Validate currency codes](#isvalidcurrencycodecurrencycode-string-boolean)
+- [Validate transaction amounts](#isvalidtransactionamountamount-number-boolean)
 - Validate cryptocurrency addresses (e.g., Bitcoin, Ethereum) [To be done]
 
 ## API
@@ -43,7 +43,7 @@ Validates a credit card number using the [Luhn algorithm](https://en.wikipedia.o
 import { isValidCreditCardNumber} from 'valifino';
 
 /**
- * @param cardNumber - The card number in string format.
+ * @param {string} cardNumber - The card number in string format.
  * @returns True if the card number is valid, false otherwise.
  */
 isValidCreditCardNumber('4111111111111111'); // => true
@@ -59,8 +59,8 @@ import { isValidCVV } from 'valifino';
 
 /**
  * Validates the CVV code for the given card type.
- * @param cvv - The CVV code to validate.
- * @param cardType - The type of the card (e.g., CardType.Visa, CardType.MasterCard).
+ * @param {string} cvv - The CVV code to validate.
+ * @param {string} cardType - The type of the card (e.g., CardType.Visa, CardType.MasterCard).
  * @returns True if the CVV is valid, false otherwise.
  */
 isValidCVV(123, 'Visa'); // => true
@@ -75,7 +75,7 @@ Validates the expiration date of a credit card.
 import { isValidExpirationDate } from 'valifino';
 
 /**
- * @param expirationDate - The expiration date in the format MM/YY or MM/YYYY.
+ * @param {string} expirationDate - The expiration date in the format MM/YY or MM/YYYY.
  * @returns True if the expiration date is valid, false otherwise.
  */
 isValidExpirationDate('12/2029'); // => true
@@ -91,7 +91,7 @@ import { isValidIBAN } from 'valifino';
 
 /**
  * Checks whether a given string is a valid International Bank Account Number (IBAN).
- * @param iban The IBAN to validate.
+ * @param {string} iban The IBAN to validate.
  * @returns `true` if the IBAN is valid, `false` otherwise.
  */
 isValidIBAN('MD75EX0900002374642125EU'); // => true (Moldova IBAN)
@@ -108,8 +108,8 @@ import { isValidBBAN } from './valifino';
 /**
  * Checks if the provided BBAN (Basic Bank Account Number) is valid for a given country.
  *
- * @param countryCode - The two-letter ISO country code.
- * @param bban - The BBAN to validate.
+ * @param {string} countryCode - The two-letter ISO country code.
+ * @param {string} bban - The BBAN to validate.
  * @returns True if the BBAN is valid for the specified country, false otherwise.
  */
 isValidBBAN('BE', '539007547034'); // => true (Belgium)
@@ -128,7 +128,7 @@ import { isValidCurrencyCode } from 'valifino';
 
 /**
  * Validates a currency code against the ISO 4217 standard.
- * @param currencyCode - The currency code to validate.
+ * @param {string} currencyCode - The currency code to validate.
  * @returns True if the currency code is valid, false otherwise.
  */
 isValidCurrencyCode('USD'); // => true
@@ -144,7 +144,7 @@ import { isValidTransactionAmount } from 'valifino';
 
 /**
  * Validates a transaction amount (up to 3 decimal places are allowed).
- * @param amount - The transaction amount to validate.
+ * @param {number} amount - The transaction amount to validate.
  * @returns True if the transaction amount is valid, false otherwise.
  */
 isValidTransactionAmount(100.0); // => true
