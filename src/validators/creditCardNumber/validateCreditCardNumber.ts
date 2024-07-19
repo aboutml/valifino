@@ -1,3 +1,7 @@
+/**
+ * @param {string} creditCardNumber - The card number in string format.
+ * @returns True if the card number is valid, false otherwise.
+ */
 export function isValidCreditCardNumber(creditCardNumber: string): boolean {
   const digits = creditCardNumber.replace(/\D/g, '').split('').map(Number);
 

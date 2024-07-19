@@ -1,6 +1,6 @@
 /**
  * Validates the expiration date of a credit card.
- * @param expirationDate - The expiration date in the format MM/YY or MM/YYYY.
+ * @param {string} expirationDate - The expiration date in the format MM/YY or MM/YYYY.
  * @returns True if the expiration date is valid, false otherwise.
  */
 export function isValidExpirationDate(expirationDate: string): boolean {
