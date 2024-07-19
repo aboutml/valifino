@@ -10,6 +10,7 @@
 
 > A comprehensive library of financial validators for Node.js, built using TypeScript. This library provides a set of functions to validate various financial instruments and formats such as credit card numbers, IBANs, SWIFT/BIC codes, and more.
 
+![Valifino](./images/logo.png)
 
 ## Install
 
@@ -23,6 +24,7 @@ npm install valifino
 - Validate CVV codes for various card types
 - Validate expiration dates of credit cards
 - Validate IBANs for multiple countries
+- Validate BBANs for multiple countries
 - Validate SWIFT/BIC codes [To be done]
 - Validate routing numbers (e.g., ABA routing numbers) [To be done]
 - Validate bank account numbers [To be done]
@@ -95,6 +97,25 @@ import { isValidIBAN } from 'valifino';
 isValidIBAN('MD75EX0900002374642125EU'); // => true (Moldova IBAN)
 isValidIBAN('BE68539007547035'); // => false (incorrect digit check)
 ````
+
+### isValidBBAN(countryCode: string, bban: string): boolean
+
+Validates a Basic Bank Account Number (BBAN) for multiple countries.
+
+```ts
+import { isValidBBAN } from './valifino';
+
+/**
+ * Checks if the provided BBAN (Basic Bank Account Number) is valid for a given country.
+ *
+ * @param countryCode - The two-letter ISO country code.
+ * @param bban - The BBAN to validate.
+ * @returns True if the BBAN is valid for the specified country, false otherwise.
+ */
+isValidBBAN('BE', '539007547034'); // => true (Belgium)
+isValidBBAN('BE', 'ABC-0075470-34); // => false
+```
+
 ### isValidSWIFTBIC [TBD]
 ### isValidRoutingNumber [TBD]
 ### isValidAccountNumber [TBD]

@@ -1,8 +1,9 @@
-import { IBANSpecification } from '../../../src/validators/iban/IBANSpecification';
+import { IBANSpecification } from '../../../src/validators/ban/IBANSpecification';
+import { validIBANSpecifications } from '../../../src/validators/ban/validIBANSpecifications';
 
 describe('IBANSpecification', () => {
   describe('#isValidIBAN', () => {
-    const ibanSpec: IBANSpecification = new IBANSpecification('AD', 24, 'F04F04A12', 'AD1200012030200359100100');;
+    const ibanSpec: IBANSpecification = new IBANSpecification('AD', 24, 'F04F04A12', 'AD1200012030200359100100');
 
     it('should return true for a valid IBAN', () => {
       expect(ibanSpec.isValidIBAN('AD1200012030200359100100')).toBe(true);
@@ -18,6 +19,12 @@ describe('IBANSpecification', () => {
 
     it('should return false for an invalid IBAN with incorrect check digits', () => {
       expect(ibanSpec.isValidIBAN('AD1200012030200359100101')).toBe(false);
+    });
+
+    it('should return true for all spec examples', () => {
+      for (const spec of validIBANSpecifications.values()) {
+        expect(spec.isValidIBAN(spec.example)).toBe(true);
+      }
     });
   });
 });

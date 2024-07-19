@@ -4,7 +4,7 @@ export { isValidExpirationDate } from './validators/expirationDate/validateExpir
 export { isValidCVV } from './validators/cvv/validateCVV';
 export { isValidCurrencyCode } from './validators/currencyCode/validateCurrencyCode';
 export { isValidTransactionAmount } from './validators/transactionAmount/validateTransactionAmount';
-export { isValidIBAN } from './validators/iban/validateIBAN';
+export { isValidIBAN, isValidBBAN } from './validators/ban/validateBAN';
 
 // Types
 export { CardType } from './types/CardType';
