@@ -38,7 +38,13 @@
     "banking",
     "payment",
     "credit card",
-    "npm"
+    "npm",
+    "swift",
+    "iban",
+    "bic",
+    "cvv",
+    "expiry date",
+    "credit card number"
   ],
   "bugs": {
     "url": "https://github.com/aboutml/valifino/issues"

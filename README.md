@@ -25,7 +25,7 @@ npm install valifino
 - [Validate expiration dates of credit cards](#isvalidexpirationdateexpirationdate-string-boolean)
 - [Validate IBANs for multiple countries](#isvalidibaniban-string-boolean)
 - [Validate BBANs for multiple countries](#isvalidbbancountrycode-string-bban-string-boolean)
-- Validate SWIFT/BIC codes [To be done]
+- [Validate SWIFT/BIC codes](#isvalidswiftswiftcode-string-boolean)
 - Validate routing numbers (e.g., ABA routing numbers) [To be done]
 - Validate bank account numbers [To be done]
 - [Validate currency codes](#isvalidcurrencycodecurrencycode-string-boolean)
@@ -116,7 +116,21 @@ isValidBBAN('BE', '539007547034'); // => true (Belgium)
 isValidBBAN('BE', 'ABC-0075470-34); // => false
 ```
 
-### isValidSWIFTBIC [TBD]
+### isValidSWIFT(swiftCode: string): boolean
+
+Validates a SWIFT/BIC code.
+
+```ts
+import { isValidSWIFT } from 'valifino';
+
+/**
+ * Validates a SWIFT/BIC code.
+ * @param {string} swiftCode - The SWIFT/BIC code to validate.
+ * @returns True if the SWIFT/BIC code is valid, false otherwise.
+ */
+isValidSWIFT('DEUTDEFF'); // => true (Deutsche Bank)
+isValidSWIFT('DEUTDEFF!'); // => false (invalid character)
+```
 ### isValidRoutingNumber [TBD]
 ### isValidAccountNumber [TBD]
 ### isValidCurrencyCode(currencyCode: string): boolean

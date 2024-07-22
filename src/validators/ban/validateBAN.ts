@@ -1,10 +1,7 @@
 import { validIBANSpecifications } from './validIBANSpecifications';
+import { isString } from '../../utils/isString';
 
 const NON_ALPHANUM = /[^a-zA-Z0-9]/g;
-
-function isString(value: unknown): boolean {
-  return typeof value === 'string';
-}
 
 function electronicFormat(iban: string): string {
   return iban.replace(NON_ALPHANUM, '').toUpperCase();
