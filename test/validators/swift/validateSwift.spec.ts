@@ -1,7 +1,7 @@
 import { isValidSWIFT } from '../../../src';
 
 describe('validateSWIFT', () => {
-  describe('#isValidSWIFTBIC', () => {
+  describe('#isValidSWIFT', () => {
     it('should return true for valid 8-character SWIFT/BIC codes', () => {
       expect(isValidSWIFT('DEUTDEFF')).toBe(true); // Deutsche Bank, Germany
       expect(isValidSWIFT('BNPAFRPP')).toBe(true); // BNP Paribas, France
