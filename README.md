@@ -27,7 +27,6 @@ npm install valifino
 - [Validate BBANs for multiple countries](#isvalidbbancountrycode-string-bban-string-boolean)
 - [Validate SWIFT/BIC codes](#isvalidswiftswiftcode-string-boolean)
 - [Validate routing numbers](#isvalidusroutingnumberroutingnumber-string-boolean)
-- Validate bank account numbers [To be done]
 - [Validate currency codes](#isvalidcurrencycodecurrencycode-string-boolean)
 - [Validate transaction amounts](#isvalidtransactionamountamount-number-boolean)
 - Validate cryptocurrency addresses (e.g., Bitcoin, Ethereum) [To be done]
@@ -147,7 +146,6 @@ isValidUSRoutingNumber('021000021'); // => true
 isValidUSRoutingNumber('021000021!'); // => false (invalid character)
 ```
 
-### isValidAccountNumber [TBD]
 ### isValidCurrencyCode(currencyCode: string): boolean
 
 Validates a currency code based on the ISO 4217 standard.
