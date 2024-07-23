@@ -26,7 +26,7 @@ npm install valifino
 - [Validate IBANs for multiple countries](#isvalidibaniban-string-boolean)
 - [Validate BBANs for multiple countries](#isvalidbbancountrycode-string-bban-string-boolean)
 - [Validate SWIFT/BIC codes](#isvalidswiftswiftcode-string-boolean)
-- Validate routing numbers (e.g., ABA routing numbers) [To be done]
+- [Validate routing numbers](#isvalidusroutingnumberroutingnumber-string-boolean)
 - Validate bank account numbers [To be done]
 - [Validate currency codes](#isvalidcurrencycodecurrencycode-string-boolean)
 - [Validate transaction amounts](#isvalidtransactionamountamount-number-boolean)
@@ -131,7 +131,22 @@ import { isValidSWIFT } from 'valifino';
 isValidSWIFT('DEUTDEFF'); // => true (Deutsche Bank)
 isValidSWIFT('DEUTDEFF!'); // => false (invalid character)
 ```
-### isValidRoutingNumber [TBD]
+### isValidUSRoutingNumber(routingNumber: string): boolean
+
+Validates a US routing number with ABA algorithm.
+
+```ts
+import { isValidUSRoutingNumber } from 'valifino';
+
+/**
+ * Validates a US routing number.
+ * @param {string} routingNumber - The US routing number to validate.
+ * @returns True if the routing number is valid, false otherwise.
+ */
+isValidUSRoutingNumber('021000021'); // => true
+isValidUSRoutingNumber('021000021!'); // => false (invalid character)
+```
+
 ### isValidAccountNumber [TBD]
 ### isValidCurrencyCode(currencyCode: string): boolean
 
