@@ -44,7 +44,8 @@
     "bic",
     "cvv",
     "expiry date",
-    "credit card number"
+    "credit card number",
+    "routing number"
   ],
   "bugs": {
     "url": "https://github.com/aboutml/valifino/issues"
