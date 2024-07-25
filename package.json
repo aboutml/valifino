@@ -123,5 +123,8 @@
       "@semantic-release/npm",
       "@semantic-release/github"
     ]
+  },
+  "dependencies": {
+    "js-sha3": "^0.9.3"
   }
 }
