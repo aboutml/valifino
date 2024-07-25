@@ -29,7 +29,7 @@ npm install valifino
 - [Validate routing numbers](#isvalidusroutingnumberroutingnumber-string-boolean)
 - [Validate currency codes](#isvalidcurrencycodecurrencycode-string-boolean)
 - [Validate transaction amounts](#isvalidtransactionamountamount-number-boolean)
-- [Validate Ethereum crypto wallet address](#isvalidethereumwalletaddresswalletaddress-string-boolean)
+- Validate cryptocurrency addresses (e.g., Bitcoin, Ethereum) [To be done]
 
 ## API
 
@@ -179,21 +179,7 @@ isValidTransactionAmount(100.1234); // => false
 isValidTransactionAmount(-50.00); // => false
 ```
 
-### isValidEthereumWalletAddress(walletAddress: string): boolean
-
-Validates an Ethereum crypto wallet address.
-
-```ts
-import { isValidEthereumWalletAddress } from 'valifino';
-
-/**
- * Validates an Ethereum crypto wallet address.
- * @param {string} walletAddress - The Ethereum wallet address to validate.
- * @returns True if the wallet address is valid, false otherwise.
- */
-isValidEthereumWalletAddress('0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae'); // => true
-isValidEthereumWalletAddress('de0B295669a9FD93d5F28D9Ec85E40f4cb697BAe!'); // => false
-```
+### isValidCryptoAddress [TBD]
 
 [build-img]:https://github.com/aboutml/valifino/actions/workflows/release.yml/badge.svg
 [build-url]:https://github.com/aboutml/valifino/actions/workflows/release.yml
