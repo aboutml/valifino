@@ -7,6 +7,7 @@ export { isValidTransactionAmount } from './validators/transactionAmount/validat
 export { isValidIBAN, isValidBBAN } from './validators/ban/validateBAN';
 export { isValidSWIFT } from './validators/swift/validateSwift';
 export { isValidUSRoutingNumber } from './validators/routingNumber/validateUSRoutingNumber';
+export { isValidEthereumWalletAddress } from './validators/crypto/validateEthereumWalletAddress';
 
 // Types
 export { CardType } from './types/CardType';
