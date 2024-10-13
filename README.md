@@ -195,6 +195,15 @@ isValidEthereumWalletAddress('0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae'); // =
 isValidEthereumWalletAddress('de0B295669a9FD93d5F28D9Ec85E40f4cb697BAe!'); // => false
 ```
 
+## We Value Your Feedback
+
+At Valifino, we strive to continuously improve and provide the best financial validation library for the community. Your feedback is crucial in helping us achieve this goal!
+
+If you encounter any issues, have suggestions, or would like to request new features, please don't hesitate to [open an issue](https://github.com/aboutml/valifino/issues). We welcome and appreciate all contributions, whether it's reporting bugs, sharing ideas, or helping us enhance existing features.
+
+Thank you for supporting Valifino! Together, we can make financial validations easier and more reliable.
+
+
 [build-img]:https://github.com/aboutml/valifino/actions/workflows/release.yml/badge.svg
 [build-url]:https://github.com/aboutml/valifino/actions/workflows/release.yml
 [downloads-img]:https://img.shields.io/npm/dt/valifino
