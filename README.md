@@ -164,13 +164,13 @@ isValidCurrencyCode('XYZ'); // => false
 
 ### isValidTransactionAmount(amount: number): boolean
 
-Validates a transaction amount (up to 3 decimal places are allowed).
+Validates a transaction amount (up to 2 decimal places are allowed).
 
 ```ts
 import { isValidTransactionAmount } from 'valifino';
 
 /**
- * Validates a transaction amount (up to 3 decimal places are allowed).
+ * Validates a transaction amount (up to 2 decimal places are allowed).
  * @param {number} amount - The transaction amount to validate.
  * @returns True if the transaction amount is valid, false otherwise.
  */
