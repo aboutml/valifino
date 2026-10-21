@@ -26,8 +26,33 @@ describe('validateEthereumWalletAddress', () => {
       expect(isValidEthereumWalletAddress('de0B295669a9FD93d5F28D9Ec85E40f4cb697BAe')).toBe(false);
     });
 
-    it('should return false for an address with a checksum mismatch', () => {
-      expect(isValidEthereumWalletAddress('0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BaeG')).toBe(false);
+    it('should return false for an address that is too long', () => {
+      expect(isValidEthereumWalletAddress('0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe0')).toBe(false);
+    });
+
+    it('should return false for a non-string value', () => {
+      expect(isValidEthereumWalletAddress(undefined as unknown as string)).toBe(false);
+      expect(isValidEthereumWalletAddress(null as unknown as string)).toBe(false);
+      expect(isValidEthereumWalletAddress(123 as unknown as string)).toBe(false);
+    });
+
+    it('should return false for an empty string', () => {
+      expect(isValidEthereumWalletAddress('')).toBe(false);
+    });
+
+    it('should return false for a mixed-case address where a letter should be uppercase', () => {
+      // 4th character "B" lowered to "b" while its hash digit requires uppercase
+      expect(isValidEthereumWalletAddress('0xde0b295669a9FD93d5F28D9Ec85E40f4cb697BAe')).toBe(false);
+    });
+
+    it('should return false for a mixed-case address where a letter should be lowercase', () => {
+      // 1st character "d" raised to "D" while its hash digit requires lowercase
+      expect(isValidEthereumWalletAddress('0xDe0B295669a9FD93d5F28D9Ec85E40f4cb697BAe')).toBe(false);
+    });
+
+    it('should return true for other valid checksummed addresses', () => {
+      expect(isValidEthereumWalletAddress('0x5aAeb6053F3E94C9b9A09f33669435E7Ef1BeAed')).toBe(true);
+      expect(isValidEthereumWalletAddress('0xfB6916095ca1df60bB79Ce92cE3Ea74c37c5d359')).toBe(true);
     });
   });
 });
